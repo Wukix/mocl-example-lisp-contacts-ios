@@ -6,3 +6,5 @@ The application works as follows:
 * Zach Beane's vecto (actually the Wukix fork) renders the contact list itself, as well as the detail view of each contact.
 * The UI navigation and edit form layout is defined using Xcode's Interface Builder.
 * Lisp is used to manage the contact data (sorting the list, reader/printer for storage persistence, etc.).
+
+There is also an Android version which uses the exact same app.lisp file: https://github.com/Wukix/mocl-example-lisp-contacts-android
