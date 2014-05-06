@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		23481F2419197695001611A9 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23481F2319197695001611A9 /* Security.framework */; };
 		235F046B16CEDDDF0075E6A4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 235F046A16CEDDDF0075E6A4 /* UIKit.framework */; };
 		235F046D16CEDDDF0075E6A4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 235F046C16CEDDDF0075E6A4 /* Foundation.framework */; };
 		235F046F16CEDDDF0075E6A4 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 235F046E16CEDDDF0075E6A4 /* CoreGraphics.framework */; };
@@ -25,6 +26,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		23481F2319197695001611A9 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		235F046716CEDDDF0075E6A4 /* LispContacts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LispContacts.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		235F046A16CEDDDF0075E6A4 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		235F046C16CEDDDF0075E6A4 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -54,6 +56,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				23481F2419197695001611A9 /* Security.framework in Frameworks */,
 				2373632D170A8A2100BC23BB /* libz.dylib in Frameworks */,
 				235F046B16CEDDDF0075E6A4 /* UIKit.framework in Frameworks */,
 				235F046D16CEDDDF0075E6A4 /* Foundation.framework in Frameworks */,
@@ -85,6 +88,7 @@
 		235F046916CEDDDF0075E6A4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				23481F2319197695001611A9 /* Security.framework */,
 				235F046A16CEDDDF0075E6A4 /* UIKit.framework */,
 				235F046C16CEDDDF0075E6A4 /* Foundation.framework */,
 				235F046E16CEDDDF0075E6A4 /* CoreGraphics.framework */,
@@ -271,6 +275,10 @@
 		235F048B16CEDDDF0075E6A4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = (
+					armv7s,
+					armv7,
+				);
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "LispContacts/LispContacts-Prefix.pch";
@@ -278,8 +286,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/LispContacts\"",
-					"\"$(SRCROOT)/LispContacts/mocl\"",
+					"$(PROJECT_DIR)/LispContacts/mocl",
 				);
 				LLVM_LTO = NO;
 				PRODUCT_NAME = LispContacts;
@@ -291,6 +298,10 @@
 		235F048C16CEDDDF0075E6A4 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = (
+					armv7s,
+					armv7,
+				);
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
 				GCC_OPTIMIZATION_LEVEL = s;
@@ -300,8 +311,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/LispContacts\"",
-					"\"$(SRCROOT)/LispContacts/mocl\"",
+					"$(PROJECT_DIR)/LispContacts/mocl",
 				);
 				LLVM_LTO = NO;
 				PRODUCT_NAME = LispContacts;
